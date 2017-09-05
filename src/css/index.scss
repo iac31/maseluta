@@ -1,0 +1,68 @@
+@import "variables";
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: $font;
+  font-size: 16px;
+}
+img {
+  display: block;
+}
+nav {
+  display: flex;
+  max-width: $maxWidth;
+  margin: 0 auto;
+  justify-content: space-between;
+  .hamburger {
+    display: none;
+  }
+  .logo {
+    padding: 25px 0 25px 30px;
+  }
+  .menu {
+    display: flex;
+    align-items: center;
+    color: $tundora;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 30px;
+    div {
+      display: flex;
+    }
+  }
+}
+.nav-item {
+  display: flex;
+  a {
+    div {
+      padding: 0 20px;
+    }
+  }
+}
+
+.slider-wraper {
+  div {
+    padding: 30px;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: center;
+    color: red;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+  }
+  span {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 30px;
+    padding: 10px;
+  }
+  span:hover {
+    cursor: pointer;
+  }
+}

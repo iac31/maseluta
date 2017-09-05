@@ -10,9 +10,7 @@ import {Link} from 'react-router-dom';
 class NavItem extends Component {
     render() {
         return (
-            <Flex
-                /*position="relative"*/
-            >
+            <div className="nav-item">
                 <NavLink
                     to={`/${this.props.item.firstLevel.toLowerCase()}`}
                     activeStyle={{
@@ -24,28 +22,11 @@ class NavItem extends Component {
                         color: colors.tundora
                     }}
                 >
-                    <Block
-                        padding="0 20px"
-                    >
+                    <div>
                         {this.props.item.firstLevel}
-                    </Block>
+                    </div>
                 </NavLink>
-               {/* <Block
-                    position="absolute"
-                    top="20px"
-                    left="45%"
-                >
-                    <Block>
-                        {this.props.item.secondLevel[0]}
-                    </Block>
-                    <Block>
-                        {this.props.item.secondLevel[1]}
-                    </Block>
-                    <Block>
-                        {this.props.item.secondLevel[2]}
-                    </Block>
-                </Block>*/}
-            </Flex>
+            </div>
         )
     }
 }
@@ -53,20 +34,15 @@ class NavItem extends Component {
 class NavItemMobile extends Component {
     render() {
         return (
-            <NavLink
-                to={`/${this.props.item.firstLevel.toLowerCase()}`}
-                style={{
-                    textDecoration: 'none',
-                }}
-            >
-                <Block
-                    padding="0 20px"
-                    color={colors.white}
-                    backgroundColor={colors.java}
+            <div className="nav-item">
+                <NavLink
+                    to={`/${this.props.item.firstLevel.toLowerCase()}`}
                 >
-                    {this.props.item.firstLevel}
-                </Block>
-            </NavLink>
+                    <div>
+                        {this.props.item.firstLevel}
+                    </div>
+                </NavLink>
+            </div>
         )
     }
 }
@@ -111,53 +87,32 @@ class Nav extends Component {
                 firstLevel: 'Contact',
                 secondLevel: ''
             }
-            /*'Home', 'Despre Familie', 'Services', 'Blog', 'Pages', 'Contact'*/
         ];
         return (
             <MediumScreen>
                 {isMediumScreen => (
                     <SmallScreen>
                         {isSmallScreen => (
-                            <Block>
-                                <Flex
-                                    justifyContent='space-between'
-                                    maxWidth={maxWidth}
-                                    margin="0 auto"
-                                >
-                                    <Block
-                                        padding="25px 0 25px 30px"
-                                    >
+                            <div>
+                                <nav>
+                                    <div className="logo">
                                         <Link to="/home">
                                             <img width="172px" src={Logo} alt="Logo"/>
                                         </Link>
-                                    </Block>
-                                    <Block
-                                        display={isMediumScreen ? 'flex' : 'none'}
-                                        alignItems="center"
-                                        color={colors.java}
-                                        marginRight="30px"
-                                    >
+                                    </div>
+                                    <div className="hamburger">
                                             <span onClick={this.toggle.bind(this)}>
                                                 &#9776;
                                             </span>
-                                    </Block>
-                                    <Flex
-                                        display={isMediumScreen ? 'none' : 'flex'}
-                                        color={colors.tundora}
-                                        textTransform="uppercase"
-                                        fontSize="14px"
-                                        fontWeight="500"
-                                        paddingRight="30px"
-                                    >
+                                    </div>
+                                    <div className="menu">
                                         {navItems.map(item =>
-                                            <Flex
-                                                alignItems="center"
-                                            >
+                                            <div>
                                                 <NavItem key={item} item={item}/>
-                                            </Flex>
+                                            </div>
                                         )}
-                                    </Flex>
-                                </Flex>
+                                    </div>
+                                </nav>
                                 {/*Mobile menu*/}
                                 <Flex
                                     display={isMediumScreen ? this.state.isVisible ? 'block' : 'none' : 'none'}
@@ -179,7 +134,7 @@ class Nav extends Component {
                                     )}
                                 </Flex>
                                 {/*Mobile menu*/}
-                            </Block>
+                            </div>
                         )}
                     </SmallScreen>
                 )}

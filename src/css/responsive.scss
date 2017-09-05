@@ -1,0 +1,33 @@
+@import "variables";
+
+@media only screen and (max-width: 1023px) {
+  .nav-item {
+    a {
+      text-decoration: none;
+      div {
+        padding: 0 20px;
+        color: white;
+      }
+    }
+  }
+  nav {
+    .hamburger {
+      display: flex;
+      align-items: center;
+      color: $java;
+      margin-right: 30px;
+    }
+    .menu {
+      display: none;
+    }
+  }
+}
+
+/*display={isMediumScreen ? 'flex' : 'none'}
+alignItems="center"
+color={colors.java}
+marginRight="30px"*/
+
+@media only screen and (min-width: 1024px) {
+
+}

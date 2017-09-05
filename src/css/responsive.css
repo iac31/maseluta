@@ -1,0 +1,20 @@
+@media only screen and (max-width: 1023px) {
+  .nav-item a {
+    text-decoration: none; }
+    .nav-item a div {
+      padding: 0 20px;
+      color: white; }
+
+  nav .hamburger {
+    display: flex;
+    align-items: center;
+    color: #18AFD3;
+    margin-right: 30px; }
+  nav .menu {
+    display: none; } }
+/*display={isMediumScreen ? 'flex' : 'none'}
+alignItems="center"
+color={colors.java}
+marginRight="30px"*/
+
+/*# sourceMappingURL=responsive.css.map */
