@@ -1,11 +1,34 @@
 import React, {Component} from 'react';
-import {Block, Flex} from 'jsxstyle';
 import Logo from '../images/logo.jpg';
-import MediumScreen from "./MediumScreen";
-import SmallScreen from "./SmallScreen";
-import {NavLink} from 'react-router-dom';
-import {colors, maxWidth} from "../styles";
-import {Link} from 'react-router-dom';
+import {NavLink, Link} from 'react-router-dom';
+import {colors} from "../styles";
+
+let navItems = [
+    {
+        firstLevel: 'Home',
+        secondLevel: ''
+    },
+    {
+        firstLevel: 'Despre Familie',
+        secondLevel: ['a', 'b', 'c']
+    },
+    {
+        firstLevel: 'Services',
+        secondLevel: ''
+    },
+    {
+        firstLevel: 'Blog',
+        secondLevel: ''
+    },
+    {
+        firstLevel: 'Pages',
+        secondLevel: ['d', 'e']
+    },
+    {
+        firstLevel: 'Contact',
+        secondLevel: ''
+    }
+];
 
 class NavItem extends Component {
     render() {
@@ -16,10 +39,6 @@ class NavItem extends Component {
                     activeStyle={{
                         fontWeight: 'bold',
                         color: colors.java
-                    }}
-                    style={{
-                        textDecoration: 'none',
-                        color: colors.tundora
                     }}
                 >
                     <div>
@@ -58,87 +77,43 @@ class Nav extends Component {
     toggle() {
         this.setState({
             isVisible: !this.state.isVisible
-        })
+        });
+        console.log('click')
     }
 
     render() {
-        let navItems = [
-            {
-                firstLevel: 'Home',
-                secondLevel: ''
-            },
-            {
-                firstLevel: 'Despre Familie',
-                secondLevel: ['a', 'b', 'c']
-            },
-            {
-                firstLevel: 'Services',
-                secondLevel: ''
-            },
-            {
-                firstLevel: 'Blog',
-                secondLevel: ''
-            },
-            {
-                firstLevel: 'Pages',
-                secondLevel: ['d', 'e']
-            },
-            {
-                firstLevel: 'Contact',
-                secondLevel: ''
-            }
-        ];
         return (
-            <MediumScreen>
-                {isMediumScreen => (
-                    <SmallScreen>
-                        {isSmallScreen => (
-                            <div>
-                                <nav>
-                                    <div className="logo">
-                                        <Link to="/home">
-                                            <img width="172px" src={Logo} alt="Logo"/>
-                                        </Link>
-                                    </div>
-                                    <div className="hamburger">
+            <div>
+                <nav>
+                    <div className="logo">
+                        <Link to="/home">
+                            <img width="172px" src={Logo} alt="Logo"/>
+                        </Link>
+                    </div>
+                    <div className="hamburger">
                                             <span onClick={this.toggle.bind(this)}>
                                                 &#9776;
                                             </span>
-                                    </div>
-                                    <div className="menu">
-                                        {navItems.map(item =>
-                                            <div>
-                                                <NavItem key={item} item={item}/>
-                                            </div>
-                                        )}
-                                    </div>
-                                </nav>
-                                {/*Mobile menu*/}
-                                <Flex
-                                    display={isMediumScreen ? this.state.isVisible ? 'block' : 'none' : 'none'}
-                                >
-                                    {navItems.map(item =>
-                                        <Flex
-                                            alignItems="center"
-                                            color={colors.white}
-                                            backgroundColor={colors.java}
-                                            textTransform="uppercase"
-                                            fontSize="18px"
-                                            fontWeight="500"
-                                            padding="21px 30px"
-                                            borderBottom="1px solid"
-                                            borderBottomColor={colors.viking}
-                                        >
-                                            <NavItemMobile key={item} item={item}/>
-                                        </Flex>
-                                    )}
-                                </Flex>
-                                {/*Mobile menu*/}
+                    </div>
+                    <div className="menu">
+                        {navItems.map(item =>
+                            <div onClick={this.toggle.bind(this)}>
+                                <NavItem key={item} item={item}/>
                             </div>
                         )}
-                    </SmallScreen>
-                )}
-            </MediumScreen>
+                    </div>
+                </nav>
+                {/*Mobile menu*/}
+                {this.state.isVisible ?
+                    <div className="mobile-menu">
+                        {navItems.map(item =>
+                            <div className="mobile-item" onClick={this.toggle.bind(this)}>
+                                <NavItemMobile key={item} item={item}/>
+                            </div>
+                        )}
+                    </div> : null}
+                {/*Mobile menu*/}
+            </div>
         )
     }
 }

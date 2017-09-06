@@ -26,11 +26,24 @@ nav {
     padding: 30px; }
     nav .menu div {
       display: flex; }
+  nav .nav-item {
+    display: flex; }
+    nav .nav-item a {
+      text-decoration: none;
+      color: #4C4C4C; }
+      nav .nav-item a div {
+        padding: 0 20px; }
 
-.nav-item {
-  display: flex; }
-  .nav-item a div {
-    padding: 0 20px; }
+.mobile-menu .mobile-item {
+  display: flex;
+  align-items: center;
+  color: #ffffff;
+  background-color: #18AFD3;
+  text-transform: uppercase;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 21px 30px;
+  border-bottom: 1px solid #7AC8DB; }
 
 .slider-wraper div {
   padding: 30px;

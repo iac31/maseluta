@@ -32,16 +32,30 @@ nav {
       display: flex;
     }
   }
-}
-.nav-item {
-  display: flex;
-  a {
-    div {
-      padding: 0 20px;
+  .nav-item {
+    display: flex;
+    a {
+      text-decoration: none;
+      color: $tundora;
+      div {
+        padding: 0 20px;
+      }
     }
   }
 }
-
+.mobile-menu {
+  .mobile-item {
+    display: flex;
+    align-items: center;
+    color: $white;
+    background-color: $java;
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 21px 30px;
+    border-bottom: 1px solid $viking;
+  }
+}
 .slider-wraper {
   div {
     padding: 30px;
