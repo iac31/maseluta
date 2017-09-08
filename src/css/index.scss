@@ -137,12 +137,14 @@ nav {
       .icon-box-text {
         display: flex;
         flex-direction: column;
+        justify-content: center;
       }
       .icon-box-icon {
         display: flex;
         align-items: center;
         font-size: 110px;
         padding-left: 10px;
+        justify-content: center;
       }
       h4 {
         font-weight: 500;
@@ -272,7 +274,7 @@ nav {
   text-align: center;
   position: relative;
   div {
-    padding: 30px;
+    padding: 30px 0;
     width: 100%;
     background-repeat: no-repeat;
     background-size: auto;
