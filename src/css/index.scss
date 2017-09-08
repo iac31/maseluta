@@ -6,9 +6,11 @@ body {
   font-family: $font;
   font-size: 16px;
 }
+
 img {
   display: block;
 }
+
 nav {
   display: flex;
   max-width: $maxWidth;
@@ -43,6 +45,7 @@ nav {
     }
   }
 }
+
 .mobile-menu {
   .mobile-item {
     display: flex;
@@ -56,7 +59,226 @@ nav {
     border-bottom: 1px solid $viking;
   }
 }
+.top-info {
+  background-color: $wildSand;
+  > div {
+    max-width: $maxWidth;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    .top-info-item {
+      display: flex;
+      flex-direction: row;
+      padding: 25px 30px;
+      &-java {
+        @extend .top-info-item;
+        color: $white;
+        background-color: $java;
+        &-icon {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 32px;
+          margin-right: 30px;
+        }
+        &-text {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          line-height: 18px;
+        }
+      }
+      &-icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: $java;
+        font-size: 32px;
+        margin-right: 30px;
+      }
+      &-text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        color: $tundora;
+        line-height: 18px;
+      }
+    }
+  }
+  strong {
+    font-size: 14px;
+    font-weight: 500;
+  }
+  span {
+    font-size: 12px;
+    font-weight: 300;
+  }
+}
+
+/*
+color={colors.tundora}
+                                            flexDirection="column"
+                                            justifyContent="center"
+*/
+
+.icon-boxes-content {
+  max-width: $maxWidth;
+  margin: 0 auto;
+  > div {
+    display: flex;
+    .icon-boxes {
+      display: flex;
+      .icon-box-item {
+        display: flex;
+        flex-direction: row;
+        color: $white;
+        padding: 45px 40px;
+        transition: all .2s ease-in;
+        z-index: 1;
+        &:hover {
+          transform: translateY(-10px);
+        }
+      }
+      .icon-box-text {
+        display: flex;
+        flex-direction: column;
+      }
+      .icon-box-icon {
+        display: flex;
+        align-items: center;
+        font-size: 110px;
+        padding-left: 10px;
+      }
+      h4 {
+        font-weight: 500;
+        font-size: 20px;
+        padding: 0;
+        margin: 0 0 10px;
+      }
+      p {
+        font-size: 16px;
+        line-height: 24px;
+      }
+    }
+  }
+}
+
+.about-us-zone {
+  display: flex;
+  flex-direction: row;
+  max-width: $maxWidth;
+  margin: 0 auto;
+  .about-us-details {
+    width: 85%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-left: 30px;
+    h2 {
+      line-height: 60px;
+      font-weight: 300;
+      font-size: 48px;
+      margin-top: 0;
+      color: $tundora;
+    }
+    h4 {
+      font-size: 30px;
+      color: $silver;
+      font-weight: 400;
+      font-style: italic;
+    }
+    figure {
+      margin: 0.4em 30px 30px 0;
+      float: left;
+      width: 300px;
+    }
+    figcaption {
+      color: $silver;
+      font-size: 12px;
+      line-height: 18px;
+      padding: 20px 0 0;
+    }
+  }
+  .about-us-text {
+    line-height: 30px;
+    font-weight: 300;
+    font-size: 18px;
+    color: $grey;
+    padding-right: 100px;
+  }
+  .certificates {
+    display: flex;
+    flex-direction: column;
+    width: 15%;
+    background-color: $wildSand;
+    padding: 50px 60px 70px 60px;
+    color: $tundora;
+    align-items: center;
+    h5 {
+      line-height: 24px;
+      font-weight: 500;
+      font-size: 18px;
+      text-align: center;
+    }
+    div {
+      padding: 15px 0;
+    }
+  }
+}
+
+.our-advantages {
+  background-color: $java;
+  width: 100%;
+  > div {
+    max-width: $maxWidth;
+    padding: 60px 30px 40px 30px;
+    margin: 0 auto;
+    color: $white;
+    h2 {
+      margin: 0 0 70px 0;
+      line-height: 60px;
+      font-weight: 300;
+      font-size: 48px;
+    }
+    > div {
+      display: flex;
+      flex-wrap: wrap;
+      .our-advantages-item {
+        display: flex;
+        flex-direction: column;
+        padding: 0 2% 0 0;
+      }
+      .our-advantages-icon {
+        font-size: 52px;
+      }
+      h4 {
+        font-size: 24px;
+        font-weight: 300;
+      }
+      p {
+        font-size: 16px;
+        line-height: 24px;
+        font-weight: 400;
+        color: rgba(255, 255, 255, 0.5);
+      }
+    }
+  }
+}
+
+.slider-div {
+  background-image: url("../images/slider.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 65vh;
+}
+
 .slider-wraper {
+  width: 100%;
+  height: 20vh;
+  overflow: hidden;
+  text-align: center;
+  position: relative;
   div {
     padding: 30px;
     width: 100%;
@@ -69,14 +291,43 @@ nav {
     transform: translateY(-50%);
     left: 0;
   }
-  span {
+  .right-arrow {
     position: absolute;
     top: 50%;
+    right: 30px;
     transform: translateY(-50%);
     font-size: 30px;
     padding: 10px;
+    &:hover {
+      cursor: pointer;
+    }
   }
-  span:hover {
-    cursor: pointer;
+  .left-arrow {
+    position: absolute;
+    top: 50%;
+    left: 30px;
+    transform: translateY(-50%);
+    font-size: 30px;
+    padding: 10px;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  .slider-item-1 {
+    background-image: url("../images/cert1.jpg");
+  }
+  .slider-item-2 {
+    background-image: url("../images/cert2.jpg");
+  }
+  .slider-item-3 {
+    background-image: url("../images/cert3.jpg");
   }
 }
+
+/*
+width="100%"
+                  height="20vh"
+                  overflow="hidden"
+                  textAlign="center"
+                  position="relative"
+*/

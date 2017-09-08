@@ -6,8 +6,8 @@ import {
     Switch,
     Redirect
 } from 'react-router-dom';
-import './css/index.css';
 import './css/icomoon.css';
+import './css/index.css';
 import './css/responsive.css';
 import Nav from './components/Nav';
 import Home from './screens/Home';

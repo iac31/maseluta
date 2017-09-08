@@ -21,15 +21,56 @@
       display: none;
     }
   }
+  .icon-boxes {
+    flex-direction: column;
+    width: 100%;
+    .icon-box-item {
+      justify-content: space-between;
+    }
+  }
 }
-
-/*display={isMediumScreen ? 'flex' : 'none'}
-alignItems="center"
-color={colors.java}
-marginRight="30px"*/
 
 @media only screen and (min-width: 1024px) {
   .mobile-menu {
     display: none;
+  }
+  .icon-boxes {
+    flex-direction: row;
+    .icon-box-item {
+      margin-top: -100px;
+    }
+  }
+  .our-advantages-item {
+    width: 23%;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .top-info {
+    > div {
+      flex-direction: column;
+    }
+  }
+  .about-us-zone {
+    flex-direction: column;
+    .about-us-details {
+      width: 100%;
+    }
+    .certificates {
+      width: 100%;
+      padding-left: 0;
+    }
+  }
+  .our-advantages {
+    text-align: center;
+    .our-advantages-item {
+      width: 98%;
+    }
+  }
+}
+
+@media screen and (min-width: 651px) and (max-width: 1024px) {
+  .our-advantages-item {
+    width: 48%;
   }
 }
