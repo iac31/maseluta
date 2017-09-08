@@ -135,7 +135,6 @@ color={colors.tundora}
   max-width: 1200px;
   margin: 0 auto; }
   .about-us-zone .about-us-details {
-    width: 85%;
     padding-top: 50px;
     padding-bottom: 50px;
     padding-left: 30px; }
@@ -168,7 +167,6 @@ color={colors.tundora}
   .about-us-zone .certificates {
     display: flex;
     flex-direction: column;
-    width: 15%;
     background-color: #F5F5F5;
     padding: 50px 60px 70px 60px;
     color: #4C4C4C;

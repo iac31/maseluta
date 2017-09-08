@@ -35,16 +35,19 @@
 
   .about-us-zone {
     flex-direction: column; }
-    .about-us-zone .about-us-details {
-      width: 100%; }
-    .about-us-zone .certificates {
-      width: 100%;
-      padding-left: 0; }
+    .about-us-zone .about-us-text {
+      padding-right: 30px; }
 
   .our-advantages {
     text-align: center; }
     .our-advantages .our-advantages-item {
       width: 98%; } }
+/*@media screen and (min-width: 651px) {
+  .about-us-details {
+    width: 85%;
+    padding-right: 30px;
+  }
+}*/
 @media screen and (min-width: 651px) and (max-width: 1024px) {
   .our-advantages-item {
     width: 48%; } }

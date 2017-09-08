@@ -170,7 +170,6 @@ color={colors.tundora}
   max-width: $maxWidth;
   margin: 0 auto;
   .about-us-details {
-    width: 85%;
     padding-top: 50px;
     padding-bottom: 50px;
     padding-left: 30px;
@@ -209,7 +208,6 @@ color={colors.tundora}
   .certificates {
     display: flex;
     flex-direction: column;
-    width: 15%;
     background-color: $wildSand;
     padding: 50px 60px 70px 60px;
     color: $tundora;
