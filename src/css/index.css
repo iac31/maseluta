@@ -14,6 +14,8 @@ nav {
   justify-content: space-between; }
   nav .hamburger {
     display: none; }
+    nav .hamburger:hover {
+      cursor: pointer; }
   nav .logo {
     padding: 25px 0 25px 30px; }
   nav .menu {
@@ -185,7 +187,7 @@ nav {
     margin: 0 auto;
     color: #ffffff; }
     .our-advantages > div h2 {
-      margin: 0 0 70px 0;
+      margin: 0 0 30px 0;
       line-height: 60px;
       font-weight: 300;
       font-size: 48px; }
@@ -193,6 +195,7 @@ nav {
       display: flex;
       flex-wrap: wrap; }
       .our-advantages > div > div .our-advantages-item {
+        margin-top: 40px;
         display: flex;
         flex-direction: column;
         padding: 0 2% 0 0; }
