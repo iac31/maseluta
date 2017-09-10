@@ -11,6 +11,12 @@ img {
   display: block;
 }
 
+.tile-zone {
+  line-height: 60px;
+  font-weight: 300;
+  font-size: 48px;
+}
+
 nav {
   display: flex;
   max-width: $maxWidth;
@@ -269,6 +275,15 @@ nav {
   background-size: cover;
   background-position: center;
   height: 65vh;
+}
+
+.succes-stories {
+  max-width: $maxWidth;
+  margin: 0 auto;
+  padding: 0 30px;
+  h2 {
+    color: $tundora;
+  }
 }
 
 .slider-wraper {

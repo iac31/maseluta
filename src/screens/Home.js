@@ -129,6 +129,12 @@ const OurAdvantages = () => (
     </div>
 );
 
+const SuccesStories = () => (
+    <div className="succes-stories">
+        <h2 className="tile-zone">Success Stories</h2>
+    </div>
+);
+
 class Slider extends React.Component {
     render() {
         return (
@@ -157,6 +163,7 @@ const Home = () => (
         </div>
         <AboutUsZone/>
         <OurAdvantages key={iconAdvantages} item={iconAdvantages}/>
+        <SuccesStories/>
         <Slider/>
     </div>
 );
