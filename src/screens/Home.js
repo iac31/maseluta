@@ -139,7 +139,7 @@ class Slider extends React.Component {
     render() {
         return (
             <div className="slider-wraper">
-                <div className="slider-item-1">Text 1</div>
+                {/*<div className="slider-item-1">Text 1</div>
                 <div className="slider-item-2">Text 2</div>
                 <div className="slider-item-3">Text 3</div>
                 <span className="left-arrow">
@@ -147,7 +147,7 @@ class Slider extends React.Component {
                 </span>
                 <span className="right-arrow">
                     &#8250;
-                </span>
+                </span>*/}
             </div>
         )
     }
