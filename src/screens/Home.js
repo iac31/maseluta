@@ -129,7 +129,7 @@ const OurAdvantages = () => (
     </div>
 );
 
-const SuccesStories = () => (
+const SuccessStories = () => (
     <div className="succes-stories">
         <h2 className="tile-zone">Success Stories</h2>
     </div>
@@ -163,7 +163,7 @@ const Home = () => (
         </div>
         <AboutUsZone/>
         <OurAdvantages key={iconAdvantages} item={iconAdvantages}/>
-        <SuccesStories/>
+        <SuccessStories/>
         <Slider/>
     </div>
 );
